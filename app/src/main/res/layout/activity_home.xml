@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/celeste"
+    tools:context=".Home">
+
+    <View
+        android:id="@+id/fondoBlanco"
+        android:layout_width="479dp"
+        android:layout_height="495dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+    <TextView
+        android:id="@+id/saludo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hola, Daniela"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp" />
+    <TextView
+        android:id="@+id/textoSaldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saldo disponible"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/saludo"
+        app:layout_constraintTop_toBottomOf="@id/saludo"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:id="@+id/saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$ 880.000"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@id/textoSaldo"
+        app:layout_constraintTop_toBottomOf="@id/textoSaldo"
+        android:layout_marginTop="8dp" />
+    <Button
+        android:id="@+id/btnEnviarDinero"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="Enviar dinero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/saldo"
+        android:layout_marginTop="40dp" />
+
+    <Button
+        android:id="@+id/btnIngresarDinero"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="Ingresar dinero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEnviarDinero"
+        android:layout_marginTop="15dp" />
+    <TextView
+        android:id="@+id/tituloMovimientos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Últimos movimientos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnIngresarDinero"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/movimiento1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transferencia recibida     + $25.000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tituloMovimientos"
+        app:layout_constraintTop_toBottomOf="@id/tituloMovimientos"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/movimiento2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Transferencia enviada       - $10.000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/tituloMovimientos"
+        app:layout_constraintTop_toBottomOf="@id/movimiento1"
+        android:layout_marginTop="15dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/celeste"
+    tools:context=".SendMoney">
+
+    <TextView
+        android:id="@+id/tituloEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar dinero"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp" />
+
+    <EditText
+        android:id="@+id/destinatario"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:hint="Destinatario"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloEnviar"
+        android:layout_marginTop="40dp" />
+
+    <EditText
+        android:id="@+id/montoEnviar"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:hint="Monto"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/destinatario"
+        android:layout_marginTop="15dp" />
+
+    <EditText
+        android:id="@+id/mensaje"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:hint="Mensaje (opcional)"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/montoEnviar"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:text="Enviar dinero"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mensaje"
+        android:layout_marginTop="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
